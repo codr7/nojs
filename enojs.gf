@@ -18,7 +18,7 @@ let: lb (
   .. write(zls)
 )
 
-let: px (length(lb) +(length(zb)) div(4) +1)
+let: px (length(lb) +(zl) div(4) +1)
 let: h sqrt(px)
 let: w (h +1)
 
