@@ -2,7 +2,6 @@ use: abc...
 use: image (new-rgba set)
 use: io (ARGS OUT Byte length new-buffer slurp to-byte write)
 use: math (div sqrt)
-use: png (encode)
 use: zip (add close)
 
 let: zb new-buffer
