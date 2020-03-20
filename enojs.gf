@@ -2,13 +2,14 @@
 
 use: abc...
 use: image (new-rgba set)
-use: io (ARGS OUT Byte length new-buffer slurp to-byte write)
+use: io (ARGS OUT Byte bytes length new-buffer slurp to-byte write)
+use: iter (~ next)
 use: math (div sqrt)
 use: zip (add close)
 
 let: zb new-buffer
 let: z zip.new-writer(zb)
-ARGS for: (z add($) write(slurp($)))
+ARGS for: (z add($) write($ slurp))
 close(z)
 
 let: zl length(zb)
@@ -16,22 +17,22 @@ let: zls to-string(zl)
 
 let: lb (
   new-buffer
-  .. write(to-byte(length(zls)))
+  .. write(zls length to-byte)
   .. write(zls)
 )
 
-let: px (length(lb) +(zl) div(4) +1)
+define: PX-BYTES 4
+
+let: px (lb length +(zl) div(PX-BYTES) +1)
 let: h sqrt(px)
 let: w (h +1)
 
 let: img new-rgba(w h)
-let: in (iter(lb)~(iter(zb)))
-
-method: b (; Byte) {next(in) .. is(NIL) ?: (_ to-byte(0)) ()}
+let: in (lb bytes ~(zb bytes) ~(0 to-byte iter.value))
 
 w for: {
   let: x $
-  h for: (img set(x $ b b b b))
+  h for: (img set(x $ next(in) next(in) next(in) next(in)))
 }
 
 img png.encode(OUT)
