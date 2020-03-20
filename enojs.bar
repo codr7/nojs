@@ -30,9 +30,9 @@ let: w (h +1)
 let: img new-rgba(w h)
 let: in (lb bytes ~(zb bytes) ~(0 to-byte iter.value))
 
-w for: {
-  let: x $
-  h for: (img set(x $ next(in) next(in) next(in) next(in)))
+h for: {
+  let: y $
+  w for: (img set($ y next(in) next(in) next(in) next(in)))
 }
 
 img png.encode(OUT)
