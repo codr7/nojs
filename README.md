@@ -12,7 +12,7 @@ I've been thinking about encrypted communications for a long time. Not because I
 The code is written in [gfoo](https://github.com/codr7/gfoo) which needs to be installed to run it. Any number of input files may be specified, the resulting PNG image is written to standard output. The files are zipped before being encoded to reduce size and preserve file names.
 
 ```
-$ gfoo enojs.gf alice.txt > alice.png
+$ gfoo enojs.bar alice.txt > alice.png
 ```
 
 ### examples
