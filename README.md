@@ -1,4 +1,4 @@
-### intro
+### introduction
 This project so far contains a commandline tool that compresses and encodes a set of files as a PNG image. The goal is to find a way to encode encrypted data that's not detectable as such using algorithms, as well as convenient to distribute. I have chosen to delay the effort of implementing a decoder, as well as adding the encryption layer, until I feel reasonably confident about the chosen approach.
 
 ### motivation
@@ -16,7 +16,7 @@ $ gfoo enojs.gf alice.txt > alice.png
 ```
 
 ### examples
-Two examples are included in the repository, the complete texts of [Alice's Adventures in Wonderland](https://github.com/codr7/nojs/blob/master/alice.txt) by Lewis Carroll and [The Adventures of Sherlock Holmes](https://github.com/codr7/nojs/blob/master/sherlock.txt) by Arthor Conan Doyle.
+Two examples are included in the repository, the complete texts of [Alice's Adventures in Wonderland](https://github.com/codr7/nojs/blob/master/alice.txt) by Lewis Carroll and [The Adventures of Sherlock Holmes](https://github.com/codr7/nojs/blob/master/sherlock.txt) by Arthur Conan Doyle.
 
 alice.png<br/>
 ![alice](alice.png)
