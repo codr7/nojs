@@ -35,4 +35,4 @@ h for: {
   w for: (img set($ y PX-BYTES for: next(in)))
 }
 
-img png.encode(OUT)
+OUT png.encode(img)
