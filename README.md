@@ -2,7 +2,7 @@
 This project so far contains a commandline tool that compresses and encodes a set of files as a PNG image. The goal is to find a way to encode encrypted data that's not detectable as such using algorithms, as well as convenient to distribute. I have chosen to delay the effort of implementing a decoder, as well as adding the encryption layer, until I feel reasonably confident about the chosen approach.
 
 ### motivation
-I've been thinking about encrypted communications for a long time. Not because I have anything to hide, more because I'm a hacker at heart and like to mess with the systems designed to control us. At one point I wrote a messenger that used regular email accounts as dumb channels to send Base64-encoded encrypted data. While that worked well enough, two things kept bothering me.
+I've been thinking about encrypted communication for a long time. Not because I have anything to hide, more because I'm a hacker at heart and like to mess with the systems designed to control us. At one point I wrote a messenger that used regular email accounts as dumb channels to send Base64-encoded encrypted data. While that worked well enough, two things kept bothering me.
 
 * There is really no need for the software to dictate transport method. It's perfectly possible to build a messenger that simply spits out encoded data for distribution using whatever means that may then be consumed by the receiver.
 
