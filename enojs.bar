@@ -32,7 +32,7 @@ let: in (lb bytes ~(zb bytes) ~(0 to-byte iter.value))
 
 h for: {
   let: y $
-  w for: (img set($ y next(in) next(in) next(in) next(in)))
+  w for: (img set($ y PX-BYTES for: next(in)))
 }
 
 img png.encode(OUT)
