@@ -40,7 +40,7 @@ h for: {
   
   w for: {
     let: x ()
-    img set(x y PX-BYTES for: (_ next(in)))
+    img set(x y PX-BYTES times: next(in))
   }
 }
 
